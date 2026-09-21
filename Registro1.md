@@ -1201,28 +1201,37 @@ Qual é o diferencial do nosso site?
 Ao final desta primeira etapa, registre as principais decisões.
 
 1. **Problema que será resolvido:**
-   [...]
+   Pessoas sem conhecimento em Design Digital e desenvolvimento web, podem encontrar dificuldades para entender conceitos de Design digital e desenvolvimento do codigo .
+   
+3. **Público-alvo:**
+   leigos em Design digital
+4. **Principais funcionalidades:**
+   Limpar ou reiniciar o layout;
+Salvamento com localStorage;
+Orientações para iniciantes;
+Validações básicas;
+Identidade visual;
+Responsividade;
+Testes de usabilidade.
 
-2. **Público-alvo:**
-   [...]
+5. **Tipo de aplicação:**
+   Aplicação web
 
-3. **Principais funcionalidades:**
-   [...]
+6. **Stack escolhida:**
+   HTML,CSS,JS,React
+7. **Banco de dados:**
+   não vamos ter
 
-4. **Tipo de aplicação:**
-   [...]
-
-5. **Stack escolhida:**
-   [...]
-
-6. **Banco de dados:**
-   [...]
 
 
 # 10. O que mudou após conversar com a IA?
-
+A proposta do projeto ganhou um nível muito maior de clareza e direcionamento estratégico. Definimos de forma precisa a stack tecnológica que sustentará a aplicação, garantindo inovação, alto desempenho e escalabilidade. Além disso, alinhamos os objetivos centrais do sistema para resolver diretamente as dores do público-alvo. Com essa reestruturação, o escopo tornou-se mais objetivo, viável e pronto para as próximas etapas de desenvolvimento.
 
 # 11. Conclusão da primeira etapa
 
 Em aproximadamente até 5 linhas descreva o que o grupo definiu nesta etapa e quais serão os próximos passos.
-
+Nesta etapa, o grupo alinhou com clareza o problema a ser resolvido, o público-alvo e o objetivo da ferramenta educacional.
+Mapeamos as primeiras funcionalidades, entendemos nossas limitações e optamos por uma estrutura simples com React, JS, CSS e localStorage.
+Para manter as coisas práticas, decidimos criar uma aplicação direta, focada em componentes e sem a complexidade de um backend por enquanto.
+O plano agora é desenhar os wireframes, definir a cara do projeto e organizar a estrutura inicial de cada tela.
+Depois disso, vamos partir para a prática: construir o editor visual, preparar os modelos de layout e rodar os primeiros testes com usuários.
