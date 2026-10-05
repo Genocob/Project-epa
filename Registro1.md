@@ -1,7 +1,33 @@
-# Registro 01
+Registro 01 — Projeto LayoutLab
+---
+**Identificação do projeto**
 
+**Nome do projeto:**
+[layoutlab]
 
-# 1 **Ferramenta de IA utilizada:**
+**Integrantes do grupo:**
+
+* DAVI MARIANO DA SILVA
+* FABRICIO EID BERTOLINI
+* FILIPE DE ALMEIDA CISOTTO
+* GUSTAVO MOMBERG MIRANDA
+* ISAAC XAVIER GARCIA
+* LUCAS NUNES DA SILVA
+* MATHEUS HENRIQUE DOS SANTOS BRASIL
+* MIGUEL ALVES ROCHA
+* PIETRA EID GOMES
+
+**Curso:**
+[2º MTec/NT - DESENVOLVIMENTO DE SISTEMAS]
+
+**Disciplina:**
+[Desenvolvimento de Sistemas]
+
+---
+
+## 1 Registro da interação com a IA
+
+**Ferramenta de IA utilizada:**
 Manus ai
 
 **Data da interação:**
