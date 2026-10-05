@@ -1,0 +1,873 @@
+Desenvolva uma aplicação web local completa e funcional para criação visual de layouts de sites e sistemas. Este projeto NÃO é uma landing page, mockup ou demonstração visual, mas uma ferramenta real de edição visual, semelhante conceitualmente a Canva/Figma/FlutterFlow, porém com identidade própria, sem copiar seus elementos visuais, interfaces ou identidade. O público principal são estudantes, especialmente alunos do Ensino Médio em contexto educacional da Etec Sales Gomes. Portanto, priorize uma interface limpa, intuitiva, moderna, calma, criativa, organizada e fácil de entender por usuários sem conhecimento avançado de programação.
+
+A aplicação deve funcionar localmente, sem login, cadastro, autenticação, perfil, senha ou dependência obrigatória de servidor, conta externa ou serviço online. As funcionalidades principais devem funcionar offline após a instalação das dependências necessárias.
+
+TECNOLOGIAS E ARQUITETURA
+
+Utilize HTML, CSS e JavaScript, com React permitido e recomendado para estruturar o editor, componentes, estado e interface quando trouxer vantagem real. Node.js pode ser utilizado apenas como suporte de desenvolvimento/build quando necessário. Não utilizar Flask, MySQL ou banco de dados externo sem necessidade real.
+
+A arquitetura deve ser modular, organizada, reutilizável e escalável, evitando um arquivo monolítico. Separe adequadamente componentes, estilos, estado do projeto, páginas, elementos, editor, templates, persistência, sistema de design guidelines, validações/avisos e geração de código.
+
+Antes de implementar, analise toda esta especificação, defina uma arquitetura técnica coerente e descreva brevemente a estrutura planejada. Em seguida, desenvolva efetivamente a aplicação completa.
+
+FLUXO PRINCIPAL
+
+O fluxo obrigatório deve ser:
+
+MENU → ESCOLHA DE TEMPLATE → ESCOLHA DA DESIGN GUIDELINE → EDITOR VISUAL → ADICIONAR/MOVER/REDIMENSIONAR/EDITAR COMPONENTES → CRIAR MÚLTIPLAS PÁGINAS → SALVAR → GERAR CÓDIGO A QUALQUER MOMENTO → VISUALIZAR/COPIAR/EXPORTAR RESULTADO.
+
+A aplicação deve possuir três áreas principais:
+
+1. Menu
+2. Criação do Layout
+3. Gerador de Código
+
+A funcionalidade “Gerar Código” também deve estar disponível diretamente dentro do editor a qualquer momento, sem obrigar o usuário a sair da área de edição.
+
+MENU E TEMPLATES
+
+O Menu deve possuir uma navbar clara contendo:
+
+* Menu
+* Criação do Layout
+* Gerador de Código
+
+A tela inicial deve apresentar templates em cards organizados em uma grade visual.
+
+Templates obrigatórios:
+
+* Layout em Z
+* Layout em F
+* Diagrama de Gutenberg
+* Coluna Única
+* Duas Colunas / Split-Screen
+* Grid / Card-Based
+* Assíncrono / Ziguezague
+* Tela Cheia / Hero Background
+* Mondrian
+* Silhueta
+* Circo
+
+Cada template deve ser uma estrutura inicial funcional do projeto, nunca uma imagem estática.
+
+Ao selecionar um template, o editor deve abrir já preenchido com uma composição real correspondente ao modelo escolhido, contendo elementos reais e manipuláveis.
+
+O hover de cada template deve mostrar:
+
+* Nome
+* Descrição curta
+* Finalidade
+* Quando é recomendado utilizar
+* Características principais
+
+Os templates devem servir apenas como ponto de partida. O usuário deve poder modificar completamente a estrutura após carregá-los.
+
+DESIGN GUIDELINES
+
+Além da escolha do template, o usuário deve poder escolher uma Design Guideline antes de iniciar o layout.
+
+Crie um sistema próprio de Design Guidelines baseado nos princípios e recomendações gerais de design presentes nas seguintes referências oficiais:
+
+Apple Human Interface Guidelines:
+https://developer.apple.com/design/human-interface-guidelines
+
+Android Design:
+https://developer.android.com/design?hl=pt-br
+
+Microsoft Windows App Design Guidelines:
+https://learn.microsoft.com/en-us/windows/apps/design/guidelines-overview
+
+Não copie literalmente essas interfaces, componentes ou identidades visuais. Utilize os princípios de usabilidade, hierarquia visual, acessibilidade, consistência, espaçamento, legibilidade, feedback, navegação e interação como referência conceitual.
+
+A primeira Design Guideline obrigatória deve ser uma identidade própria chamada:
+
+“Dark Deco”
+
+A Dark Deco deve combinar princípios de Design Digital, hierarquia visual e psicologia das cores com uma estética contemporânea inspirada em Art Déco reinterpretada para uma interface digital moderna.
+
+A estética Dark Deco deve priorizar:
+
+* Fundo escuro sofisticado
+* Contrastes bem controlados
+* Formas geométricas
+* Linhas e divisões elegantes
+* Tipografia limpa e expressiva
+* Destaques metálicos/dourados utilizados com moderação
+* Tons escuros e neutros como base
+* Uma cor de destaque bem definida
+* Espaçamento consistente
+* Hierarquia visual forte
+* Aparência sofisticada sem prejudicar a usabilidade
+* Evitar excesso de brilho, gradientes ou elementos decorativos desnecessários
+
+A Dark Deco não deve ser apenas um tema de cores. Ela deve funcionar como uma verdadeira Design Guideline capaz de orientar:
+
+* Cores
+* Tipografia
+* Escala tipográfica
+* Espaçamento
+* Bordas
+* Raios
+* Sombras
+* Botões
+* Cards
+* Inputs
+* Links
+* Hierarquia
+* Contraste
+* Estados de interação
+* Organização visual
+* Componentes
+* Responsividade
+
+A arquitetura deve permitir adicionar outras Design Guidelines futuramente sem precisar reescrever o editor.
+
+Na tela de criação do projeto, permita ao usuário selecionar a Design Guideline desejada e aplicar suas regras ao projeto.
+
+A guideline escolhida deve influenciar a aparência inicial dos componentes e também servir como referência para o sistema de análise de consistência visual.
+
+O usuário deve poder visualizar uma pequena prévia da guideline antes de escolhê-la.
+
+SISTEMA DE AVISOS E ANÁLISE DE DESIGN
+
+A aplicação deve possuir um sistema inteligente de avisos que analise o layout criado e informe o usuário quando determinadas escolhas visuais ou estruturais não fizerem sentido.
+
+Os avisos não devem bloquear o usuário obrigatoriamente. Eles devem funcionar como recomendações educacionais e de melhoria.
+
+O sistema deve detectar, quando possível:
+
+* Contraste insuficiente entre texto e fundo
+* Texto pequeno demais para leitura
+* Excesso de cores diferentes
+* Cores que não possuem coerência entre si
+* Uso excessivo de cores de destaque
+* Componentes desalinhados
+* Espaçamentos inconsistentes
+* Elementos muito próximos das bordas
+* Sobreposição problemática entre componentes
+* Botões sem texto ou ação
+* Links sem destino
+* Botões apontando para páginas inexistentes
+* Elementos fora da área útil
+* Hierarquia visual confusa
+* Títulos sem destaque suficiente
+* Excesso de elementos em uma mesma região
+* Layout potencialmente difícil de utilizar em telas menores
+* Problemas básicos de responsividade
+* Elementos importantes muito pequenos
+* Componentes que possam prejudicar a acessibilidade
+* Uso incoerente da Design Guideline escolhida
+
+Os avisos devem possuir diferentes níveis, por exemplo:
+
+* Informação
+* Sugestão
+* Atenção
+* Problema
+
+Cada aviso deve explicar de maneira simples:
+
+“O que está acontecendo”
+“Por que isso pode ser um problema”
+“Como melhorar”
+
+Sempre que possível, oferecer uma ação para corrigir o problema automaticamente.
+
+O objetivo é também tornar o sistema uma ferramenta educacional, ensinando o estudante sobre princípios de design enquanto ele constrói o layout.
+
+EDITOR VISUAL
+
+O editor visual é o núcleo da aplicação.
+
+Ele deve possuir:
+
+* Barra superior
+* Painel lateral de componentes
+* Área central de canvas
+* Controles de páginas
+* Controles de zoom
+* Indicadores de seleção
+* Painel de propriedades
+* Acesso rápido ao salvamento
+* Acesso rápido à geração de código
+* Sistema de avisos
+* Controles de desfazer/refazer quando possível
+
+A organização deve ser inspirada na experiência geral de editores visuais profissionais, utilizando a imagem fornecida pelo usuário como referência de estrutura e experiência, mas sem copiar identidade visual, layout exato, componentes proprietários ou aparência de Canva, Figma ou FlutterFlow.
+
+CANVAS
+
+O canvas é o núcleo real do sistema e deve representar a página em edição.
+
+Ele não pode ser apenas uma imagem ou representação visual falsa.
+
+O canvas deve permitir:
+
+* Selecionar elementos
+* Mover elementos
+* Arrastar elementos
+* Redimensionar elementos
+* Editar elementos
+* Excluir elementos
+* Duplicar elementos
+* Reorganizar elementos
+* Alterar camada/ordem
+* Alterar propriedades
+* Adicionar elementos
+* Arrastar componentes do painel para o canvas
+* Posicionar elementos visualmente
+* Criar relações entre elementos
+* Editar conteúdo diretamente quando apropriado
+
+Quando um elemento estiver selecionado, deve existir uma indicação visual clara de seleção e controles apropriados para:
+
+* Mover
+* Redimensionar
+* Editar
+* Excluir
+* Duplicar
+* Alterar ordem/camada
+
+DRAG & DROP REAL
+
+Drag & Drop é obrigatório.
+
+O usuário deve conseguir arrastar componentes do painel lateral para o canvas.
+
+A operação deve modificar o estado real do projeto.
+
+O novo componente deve receber:
+
+* ID único
+* Tipo
+* Posição
+* Tamanho
+* Página
+* Estilos padrão da guideline
+* Propriedades padrão
+* Ordem/camada
+
+O componente deve permanecer manipulável depois de inserido.
+
+Não criar drag & drop apenas como animação visual.
+
+COMPONENTES OBRIGATÓRIOS
+
+Componentes iniciais:
+
+* Caixa de Imagem
+* Caixa de Título
+* Bloco de Parágrafo
+* Botão / CTA
+* Link de Navegação
+* Campo de Texto
+* Card
+* Rodapé
+
+Os componentes devem ser objetos reais do editor.
+
+Cada tipo deve possuir propriedades configuráveis adequadas.
+
+Propriedades possíveis incluem:
+
+* Conteúdo
+* Texto
+* Posição
+* Largura
+* Altura
+* Tamanho
+* Alinhamento
+* Margem
+* Padding
+* Espaçamento
+* Cor
+* Cor do texto
+* Fundo
+* Borda
+* Espessura da borda
+* Raio
+* Fonte
+* Peso da fonte
+* Imagem
+* Link
+* Destino
+* Visibilidade
+* Opacidade
+* Ordem/camada
+* Responsividade
+* Classes/estilos relevantes
+* Outras propriedades específicas do componente
+
+CARD COMO CONTAINER REAL
+
+O componente Card deve funcionar, quando viável, como um verdadeiro container.
+
+O usuário deve conseguir colocar outros componentes dentro de um Card diretamente no projeto.
+
+Por exemplo:
+
+Card
+→ Título
+→ Parágrafo
+→ Imagem
+→ Botão
+
+O Card deve possuir uma área interna identificável para receber componentes através de drag & drop.
+
+Elementos internos devem permanecer associados ao Card no estado do projeto.
+
+Permita:
+
+* Adicionar elementos dentro do Card
+* Mover elementos dentro do Card
+* Redimensionar elementos internos
+* Editar elementos internos
+* Remover elementos internos
+* Reorganizar elementos internos
+* Alterar propriedades do Card
+* Alterar espaçamento interno
+* Definir alinhamento dos filhos
+* Controlar layout interno usando conceitos como Flexbox ou Grid quando apropriado
+
+A estrutura hierárquica deve ser preservada na geração do código.
+
+Por exemplo, um Card contendo título, texto e botão deve gerar HTML semanticamente equivalente a um container contendo esses elementos, e não elementos independentes fora do Card.
+
+BOTÕES E INTERAÇÕES REAIS
+
+Todos os botões adicionados pelo usuário ao projeto devem ser funcionais.
+
+Não criar botões falsos ou meramente decorativos.
+
+O editor deve permitir configurar a ação de cada botão, incluindo pelo menos:
+
+* Navegar para outra página do projeto
+* Navegar para uma URL externa
+* Rolar para uma seção/elemento quando aplicável
+* Não executar ação, apenas quando explicitamente configurado como visual
+
+Botões que apontam para páginas internas devem funcionar tanto na visualização do projeto quanto no código exportado.
+
+Exemplo:
+
+Botão “Continuar”
+→ Página 2
+
+Ao exportar, a navegação deve continuar funcionando.
+
+LINKS DE NAVEGAÇÃO
+
+Links também devem possuir destinos reais.
+
+O usuário deve poder selecionar uma página interna como destino.
+
+A exportação deve preservar essa navegação.
+
+MÚLTIPLAS PÁGINAS
+
+O projeto deve possuir suporte real a múltiplas páginas/telas.
+
+O usuário deve conseguir:
+
+* Criar páginas
+* Selecionar páginas
+* Renomear páginas
+* Excluir páginas
+* Duplicar páginas
+* Navegar entre páginas
+* Definir página inicial quando aplicável
+* Relacionar botões e links às páginas
+
+A navegação entre páginas deve ser preservada na visualização e na exportação.
+
+ESTADO E MODELO DE DADOS
+
+Cada projeto deve possuir uma representação estruturada semelhante a:
+
+Projeto
+→ configurações
+→ design guideline
+→ páginas
+→ elementos
+→ propriedades
+→ relacionamentos
+→ navegação
+
+Cada elemento deve possuir dados suficientes para reconstrução e geração de código, incluindo, quando aplicável:
+
+* id
+* tipo
+* página
+* posição
+* tamanho
+* conteúdo
+* estilos
+* propriedades
+* ordem/camada
+* link
+* destino
+* filhos
+* parentId
+* configurações responsivas
+
+Exemplo conceitual:
+
+{
+id,
+type,
+pageId,
+parentId,
+position,
+size,
+content,
+styles,
+properties,
+children,
+layer,
+link
+}
+
+Não gerar código a partir de screenshot, imagem ou captura visual do canvas.
+
+O código deve ser gerado exclusivamente a partir do estado estruturado do projeto.
+
+RESPONSIVIDADE
+
+O sistema deve permitir criação de layouts responsivos.
+
+Considere:
+
+* Flexbox
+* CSS Grid
+* Media Queries
+* Unidades relativas
+* Percentuais
+* rem
+* vw/vh
+* min/max
+* Breakpoints
+
+O usuário deve conseguir trabalhar com dimensões relativas quando apropriado.
+
+O gerador deve produzir HTML/CSS responsivo.
+
+Sempre que possível, o editor deve alertar sobre elementos que podem quebrar em telas menores.
+
+SALVAMENTO LOCAL
+
+O projeto deve possuir salvamento local real.
+
+Não exigir conta online.
+
+Utilize mecanismo adequado do navegador, como:
+
+* localStorage para dados simples
+* IndexedDB quando necessário para projetos maiores
+
+O usuário deve conseguir fechar a aplicação e continuar posteriormente com o projeto preservado.
+
+O sistema deve possuir:
+
+* Salvar
+* Salvar automaticamente quando apropriado
+* Abrir projeto salvo
+* Criar novo projeto
+* Exportar projeto
+* Importar projeto
+
+Também é desejável permitir exportar/importar o projeto editável em JSON.
+
+O JSON deve preservar o estado necessário para reconstruir o projeto no editor.
+
+GERADOR DE CÓDIGO
+
+O gerador deve interpretar os objetos estruturados do editor e convertê-los em:
+
+* HTML
+* CSS
+* JavaScript
+
+O usuário deve poder gerar código em qualquer estágio da criação.
+
+O resultado deve refletir exatamente o estado atual do projeto naquele momento.
+
+Após novas alterações:
+
+GERAR NOVAMENTE → CÓDIGO ATUALIZADO.
+
+Não utilizar screenshot-to-code.
+
+O código exportado deve ser simples, legível e estudável, priorizando HTML, CSS e JavaScript puros, mesmo que React seja utilizado internamente na aplicação.
+
+A saída obrigatória deve incluir pelo menos:
+
+* Um arquivo .html funcional
+* Um arquivo .txt ou .md contendo o código bruto
+
+Preferencialmente permitir também exportar:
+
+* index.html
+* style.css
+* script.js
+
+quando a separação em arquivos for mais adequada.
+
+O HTML exportado deve:
+
+* Representar realmente o layout criado
+* Possuir estrutura HTML correspondente aos componentes
+* Possuir estilos reais
+* Possuir comportamentos funcionais
+* Preservar navegação
+* Preservar botões
+* Preservar links
+* Preservar múltiplas páginas
+* Ser responsivo
+* Poder ser aberto diretamente no navegador
+
+Quando possível, gerar uma versão autocontida para facilitar o estudo e compartilhamento.
+
+Os elementos criados no canvas devem possuir correspondência real no código.
+
+VISUALIZAÇÃO DO PROJETO
+
+O usuário deve conseguir visualizar o projeto como um site funcional, sem os controles do editor.
+
+A visualização deve permitir testar:
+
+* Botões
+* Links
+* Navegação entre páginas
+* Formulários quando aplicável
+* Responsividade
+* Interações básicas
+
+O modo de visualização deve utilizar o mesmo estado atual do projeto.
+
+Não criar uma visualização falsa separada do projeto real.
+
+SISTEMA DE CAMADAS E ORGANIZAÇÃO
+
+Quando necessário, permitir:
+
+* Trazer para frente
+* Enviar para trás
+* Subir camada
+* Descer camada
+* Visualizar ordem dos elementos
+* Selecionar elementos sobrepostos
+
+O sistema deve evitar comportamentos confusos durante a edição.
+
+UNDO/REDO
+
+Implemente desfazer/refazer sempre que possível.
+
+As operações importantes devem poder ser revertidas, como:
+
+* Adicionar elemento
+* Excluir elemento
+* Mover elemento
+* Redimensionar elemento
+* Editar propriedade
+* Alterar estilo
+* Criar página
+* Excluir página
+
+INTERFACE E IDENTIDADE VISUAL DO EDITOR
+
+A interface do construtor deve possuir identidade própria.
+
+Não copiar visualmente Canva, Figma, FlutterFlow ou qualquer outro editor.
+
+A interface deve aplicar princípios de:
+
+* Design Digital
+* Hierarquia visual
+* Psicologia das cores
+* Contraste
+* Legibilidade
+* Consistência
+* Feedback visual
+* Acessibilidade
+* Espaçamento
+* Ergonomia
+* Clareza de interação
+
+A interface deve ser moderna e confortável para uso prolongado por estudantes.
+
+Evite:
+
+* Excesso de gradientes
+* Excesso de animações
+* Cores extremamente saturadas
+* Sombras exageradas
+* Elementos piscando
+* Informações desnecessárias
+* Interface visualmente poluída
+
+A estética principal do sistema deve seguir a Design Guideline escolhida pelo usuário, com Dark Deco como primeira guideline disponível.
+
+ACESSIBILIDADE E USABILIDADE
+
+Considere princípios de acessibilidade, incluindo:
+
+* Contraste
+* Tamanho de texto
+* Estados de foco
+* Navegação por teclado quando possível
+* Labels adequados
+* Feedback de ações
+* Mensagens de erro compreensíveis
+* Hierarquia semântica
+* Não depender exclusivamente de cor para comunicar informação
+
+O sistema deve ser compreensível para estudantes iniciantes.
+
+FEEDBACK E ESTADOS
+
+A aplicação deve fornecer feedback real para ações importantes:
+
+* Projeto salvo
+* Projeto carregado
+* Código gerado
+* Exportação concluída
+* Elemento adicionado
+* Página criada
+* Página excluída
+* Erro de configuração
+* Aviso de acessibilidade
+* Problema de contraste
+* Link sem destino
+
+Utilize mensagens claras e não invasivas.
+
+NAVEGAÇÃO DA APLICAÇÃO
+
+A navbar principal deve permitir acessar:
+
+MENU
+CRIAÇÃO DO LAYOUT
+GERADOR DE CÓDIGO
+
+Dentro do editor, o usuário deve poder gerar código sem precisar retornar ao menu.
+
+Também deve existir uma maneira clara de voltar ao Menu sem perder o projeto.
+
+PROJETO NOVO
+
+Ao clicar em “Criar Layout”, permita:
+
+1. Escolher um template
+2. Escolher uma Design Guideline
+3. Criar o projeto
+4. Abrir o editor já configurado
+
+Também deve ser possível iniciar com um projeto em branco.
+
+VALIDAÇÕES
+
+Antes da exportação, o sistema pode realizar uma verificação do projeto.
+
+Exibir problemas como:
+
+* Página sem conteúdo
+* Botão sem destino
+* Link quebrado
+* Página inexistente como destino
+* Imagem sem configuração adequada
+* Contraste insuficiente
+* Problemas de responsividade
+* Elementos fora do canvas
+* Estrutura inconsistente
+
+O usuário deve poder exportar mesmo quando houver avisos não críticos, mas problemas graves devem ser claramente indicados.
+
+ARQUITETURA RECOMENDADA
+
+Organize o projeto de maneira modular, por exemplo:
+
+src/
+├── components/
+│   ├── editor/
+│   ├── canvas/
+│   ├── panels/
+│   ├── toolbar/
+│   ├── pages/
+│   ├── templates/
+│   ├── design-guidelines/
+│   ├── properties/
+│   ├── preview/
+│   ├── code-generator/
+│   └── common/
+├── state/
+├── models/
+├── templates/
+├── design-guidelines/
+├── generators/
+├── persistence/
+├── validation/
+├── utils/
+├── styles/
+└── App.*
+
+A estrutura pode ser adaptada conforme a implementação, mas deve manter separação clara de responsabilidades.
+
+TEMPLATES COMO DADOS
+
+Os templates devem preferencialmente ser definidos como estruturas de dados reutilizáveis, e não como páginas codificadas manualmente de forma independente.
+
+Cada template deve possuir:
+
+* Nome
+* Descrição
+* Finalidade
+* Estrutura inicial
+* Elementos
+* Posicionamento
+* Estilos
+* Hierarquia
+* Configurações responsivas
+
+Ao selecionar um template, o sistema deve clonar sua estrutura para o projeto.
+
+DESIGN GUIDELINES COMO DADOS
+
+As Design Guidelines também devem ser estruturadas de maneira modular.
+
+Cada guideline deve definir, quando aplicável:
+
+* Paleta
+* Tipografia
+* Escala
+* Espaçamento
+* Raios
+* Sombras
+* Bordas
+* Botões
+* Cards
+* Inputs
+* Estados
+* Regras de contraste
+* Regras de componentes
+
+Isso permitirá adicionar novas guidelines futuramente.
+
+RECURSOS EDUCACIONAIS
+
+Como o público principal são estudantes, o sistema deve explicar conceitos quando apropriado.
+
+Por exemplo, ao passar o mouse ou abrir informações de um template:
+
+“Layout em F: recomendado para páginas com bastante conteúdo textual, pois acompanha padrões comuns de leitura.”
+
+Para problemas de design:
+
+“Este texto possui pouco contraste com o fundo. Aumentar o contraste melhora a legibilidade e a acessibilidade.”
+
+As explicações devem ser curtas, claras e educativas, sem transformar a ferramenta em um curso obrigatório.
+
+PRIORIDADES DE IMPLEMENTAÇÃO
+
+Implemente nesta ordem:
+
+1. Estrutura e navegação
+2. Menu
+3. Sistema de templates
+4. Sistema de Design Guidelines
+5. Editor
+6. Canvas real
+7. Drag & Drop
+8. Componentes editáveis
+9. Card como container
+10. Botões e links funcionais
+11. Múltiplas páginas
+12. Sistema de propriedades
+13. Salvamento local
+14. Importação/exportação JSON
+15. Sistema de avisos e validações
+16. Gerador de código
+17. Visualização funcional
+18. Exportação HTML/CSS/JavaScript
+19. Responsividade
+20. Undo/Redo
+21. Refinamento UI/UX
+22. Recursos secundários
+
+REGRA DE IMPLEMENTAÇÃO
+
+Caso alguma funcionalidade avançada seja tecnicamente difícil, implemente primeiro uma versão funcional, coerente e realmente utilizável em vez de criar apenas aparência.
+
+Não simule funcionalidades que não existem.
+
+Não criar:
+
+* Botões falsos
+* Menus decorativos
+* Drag & drop falso
+* Canvas apenas visual
+* Templates estáticos
+* Exportação apenas como imagem
+* Gerador baseado em screenshot
+* Navegação que não funciona
+* Salvamento que não preserva o estado
+* Componentes que parecem editáveis mas não são
+
+Cada interação apresentada ao usuário deve, sempre que possível, estar conectada ao estado real da aplicação.
+
+ENTREGA
+
+Entregue:
+
+* Estrutura completa de pastas
+* Todos os arquivos necessários
+* Código completo
+* Dependências utilizadas
+* package.json quando aplicável
+* Instruções para instalação
+* Instruções para execução local
+* Explicação objetiva da arquitetura
+* Explicação do estado do projeto
+* Explicação dos templates
+* Explicação das Design Guidelines
+* Explicação do sistema de avisos
+* Explicação do canvas
+* Explicação do drag & drop
+* Explicação do sistema de páginas
+* Explicação do salvamento
+* Explicação do gerador de código
+* Explicação da exportação
+
+A aplicação deve poder ser executada localmente de maneira clara e previsível.
+
+REGRA CENTRAL DE INTERPRETAÇÃO
+
+ESTA APLICAÇÃO É UM CONSTRUTOR VISUAL DE LAYOUTS, NÃO UM SITE SOBRE LAYOUTS.
+
+Templates são pontos de partida.
+
+Componentes são objetos manipuláveis.
+
+O Card é um container real capaz de receber outros componentes.
+
+Botões e links possuem ações reais.
+
+O Canvas é o núcleo da aplicação.
+
+Drag & Drop é uma interação real.
+
+Múltiplas páginas representam o projeto real.
+
+A Design Guideline influencia a construção visual.
+
+O sistema de avisos ajuda o usuário a compreender problemas de design.
+
+O salvamento preserva o estado real.
+
+O gerador interpreta o estado estruturado.
+
+O código exportado representa o projeto criado.
+
+O resultado final deve permitir que o usuário escolha um template, escolha uma Design Guideline, abra um projeto, edite visualmente, adicione componentes, arraste componentes, coloque componentes dentro de Cards, redimensione elementos, altere propriedades, crie páginas, conecte botões e links, receba recomendações de design, salve localmente, visualize o resultado, gere código em qualquer momento e exporte um site funcional e responsivo.
+
+A ferramenta deve ser realmente utilizável por um estudante, e não apenas parecer uma ferramenta de criação visual.
