@@ -8,3 +8,4 @@ a decoração começou com a decisão de decorar com base nos quadrinhos, e depo
 
 adicionamos um tutor de ia que usamos a api do groq para gera recomendações para o layout alimentamos ela com pdfs de design digital que pegamos do amauri.
 
+melhoras no codigo como: simplificação do visual, aba de design guides, pop up de visualização do template escolhido, salvar o projeto do layout, exportar em pasta zip e texto colavel
