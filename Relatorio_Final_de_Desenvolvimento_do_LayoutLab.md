@@ -6,7 +6,7 @@
 **Instituição:** Etec Sales Gomes  
 **Curso:** 2º MTec/NT — Desenvolvimento de Sistemas  
 **Disciplina:** Desenvolvimento de Sistemas  
-**Turma/período:** 3º semestre do 2º ano  
+**Turma/período:** 4º bimestre do 2º ano  
 
 **Integrantes:**
 
